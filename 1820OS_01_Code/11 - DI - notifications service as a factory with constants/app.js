@@ -20,7 +20,7 @@ angular.module('notificationsApp', [])
         var notificationToArchive;
         var newLen = notifications.unshift(notification);
         if (newLen > MAX_LEN) {
-          notificationToArchive = this.notifications.pop();
+          notificationToArchive = notifications.pop();
           notificationsArchive.archive(notificationToArchive);
         }
       },
