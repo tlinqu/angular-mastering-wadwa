@@ -47,12 +47,18 @@
 </table>
 <div class="pagination">
     <ul>
-        <li><a ng-click="setActivePage(pageNo-1)">Prev</a></li>
+        <li ng-switch on="pageNo<=0">
+            <span ng-switch-when="true">Prev</span>
+            <span ng-switch-default><a ng-click="setActivePage(pageNo-1)">Prev</a></span>
+        </li>
         <li ng-repeat="page in pages" ng-switch on="page==pageNo">
             <span ng-switch-when="true">{{page+1}}</span>
             <span ng-switch-default><a ng-click="setActivePage(page)">{{page+1}}</a></span>
         </li>
-        <li><a ng-click="setActivePage(pageNo+1)">Next</a></li>
+        <li ng-switch on="pageNo>=pages.length-1">
+            <span ng-switch-when="true">Next</span>
+            <span ng-switch-default><a ng-click="setActivePage(pageNo+1)">Next</a></span>
+        </li>
     </ul>
 </div>
 
