@@ -47,9 +47,9 @@
 </table>
 <div class="pagination">
     <ul>
-        <li><a ng-click="activePage(page-1)">Prev</a></li>
+        <li><a ng-click="setActivePage(pageNo-1)">Prev</a></li>
         <li ng-repeat="page in pages"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
-        <li><a ng-click="activePage(page+1)">Next</a></li>
+        <li><a ng-click="setActivePage(pageNo+1)">Next</a></li>
     </ul>
 </div>
 
