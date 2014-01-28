@@ -42,7 +42,7 @@ angular.module('mongolabResource', [])
           });
       };
 
-      Resource.prototype.$save = function (data) {
+      Resource.prototype.$save = function () {
         return Resource.save(this);
       };
 
