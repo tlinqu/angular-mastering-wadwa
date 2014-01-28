@@ -48,7 +48,10 @@
 <div class="pagination">
     <ul>
         <li><a ng-click="setActivePage(pageNo-1)">Prev</a></li>
-        <li ng-repeat="page in pages"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
+        <li ng-repeat="page in pages" ng-switch on="page==pageNo">
+            <span ng-switch-when="true">{{page+1}}</span>
+            <span ng-switch-default><a ng-click="setActivePage(page)">{{page+1}}</a></span>
+        </li>
         <li><a ng-click="setActivePage(pageNo+1)">Next</a></li>
     </ul>
 </div>
