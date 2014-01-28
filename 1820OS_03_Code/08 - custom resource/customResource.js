@@ -22,6 +22,7 @@ angular.module('mongolabResource', [])
         angular.extend(this, data);
       };
 
+      //TODO: Tao - Why use q:
       Resource.query = function (params) {
         return $http.get(collectionUrl, {
           params:angular.extend({q:JSON.stringify({} || params)}, defaultParams)
