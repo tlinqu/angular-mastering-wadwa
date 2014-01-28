@@ -45,6 +45,7 @@ angular.module('arrayFilters', [])
     //pagination
     $scope.pageSize = 3;
     $scope.pages = [];
+    $scope.pageNo = 0;
     $scope.$watch('filteredBacklog.length', function(filteredSize){
       $scope.pages.length = 0;
       var noOfPages = Math.ceil(filteredSize / $scope.pageSize);
