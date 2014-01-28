@@ -25,5 +25,10 @@ angular.module('customResourceDemo', ['mongolabResource'])
     $scope.addSuperhero = function () {
       new Users({name: 'Superhero'}).$save();
     };
+
+    $scope.remove = function (user) {
+        Users['remove'](user);
+        //user.$delete();
+    };
   });
 

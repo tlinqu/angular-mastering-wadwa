@@ -11,7 +11,7 @@
    <h1>Users</h1>
    <button ng-click="addSuperhero()">Add</button>
    <ul ng-repeat="user in users">
-       <li>{{user.name}}</li>
+       <li><a ng-click="remove(user)">{{user.name}}</a></li>
    </ul>
 
    <h1>Projects</h1>
