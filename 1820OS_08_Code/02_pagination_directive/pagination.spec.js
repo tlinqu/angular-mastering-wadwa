@@ -61,4 +61,19 @@ describe('pagination directive', function () {
         expect(lis().eq(0).text().trim()).toBe('Previous');
         expect(lis().eq(-1).text().trim()).toBe('Next');
     });
+
+    it('executes the onSelectPage expression when the current page changes', inject(function ($compile, $rootScope) {
+        $rootScope.selectPageHandler =
+            jasmine.createSpy('selectPageHandler');
+        element = $compile(
+            '<pagination num-pages="numPages" ' +
+                ' current-page="currentPage" ' +
+                ' on-select-page="selectPageHandler(page)">' +
+                '</pagination>')($rootScope);
+        $rootScope.$digest();
+        var page2 = element.find('li').eq(2).find('a').eq(0);
+        page2.click();
+        $rootScope.$digest();
+        expect($rootScope.selectPageHandler).toHaveBeenCalledWith(2);
+    }));
 });

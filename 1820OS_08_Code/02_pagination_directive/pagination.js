@@ -5,7 +5,8 @@ angular.module('directives', [])
             restrict: 'E',
             scope: {
                 numPages: '=',
-                currentPage: '='
+                currentPage: '=',
+                onSelectPage: '&'
             },
             //templateUrl: 'pagination.tpl.html',
             template: '<div class="pagination">\
@@ -39,6 +40,7 @@ angular.module('directives', [])
                 scope.selectPage = function (page) {
                     if (!scope.isActive(page)) {
                         scope.currentPage = page;
+                        scope.onSelectPage({ page: page });
                     }
                 };
                 scope.selectNext = function () {
