@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="pagination.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">
+</head>
+<body ng-app="myApp">
+
+<h3>button directive</h3>
+
+<pagination num-pages="tasks.pageCount"
+            current-page="tasks.currentPage">
+</pagination>
+
+</body>
+</html>
