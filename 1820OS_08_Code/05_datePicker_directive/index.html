@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../../lib/jquery-ui-1.9.2/css/ui-lightness/jquery-ui-1.9.2.css">
+    <script src="../../lib/jquery-1.8.3/jquery-1.8.3.js"></script>
+    <script src="../../lib/jquery-ui-1.9.2/js/datepicker.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="datePicker.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+<h3>date-picker directive</h3>
+
+<input date-picker ng-model='date'/>
+
+<span>{{date|date}}</span>
+
+</body>
+</html>
