@@ -16,7 +16,7 @@ angular.module('directives', [])
                 var updateModel = function () {
                     scope.$apply(function () {
                         var date = element.datepicker("getDate");
-                        element.datepicker("setDate", element.val());
+                        //element.datepicker("setDate", element.val());
                         ngModelCtrl.$setViewValue(date);
                     });
                 };
