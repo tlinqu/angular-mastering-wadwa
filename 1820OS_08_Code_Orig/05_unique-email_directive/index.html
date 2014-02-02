@@ -23,7 +23,7 @@
   </form>
 
   <script>
-    angular.module('app', ['directives.unique-email', 'mock.Users'])
+    angular.module('app', ['unique-email-directive', 'mock.Users'])
 
     .controller('MainController', function($scope, Users) {
       $scope.user = { email: 'admin@abc.com' };
