@@ -65,7 +65,6 @@ describe('date-picker directive', function() {
     element.trigger("change");
     expect(element.datepicker('getDate')).toEqual(dateObj);
     expect(element.val()).toEqual('2012-08-01');
-    $rootScope.$digest();
     expect($rootScope.x).toEqual(dateObj);
   });
 
