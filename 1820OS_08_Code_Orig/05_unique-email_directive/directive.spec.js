@@ -1,12 +1,12 @@
 describe('uniqueEmail directive', function() {
-  var $scope, testInput, Users;
+  var $scope, testInput, Users, querySpy;
 
   beforeEach(module('unique-email-directive'));
   beforeEach(module('mock.Users'));
 
   beforeEach(inject(function($compile, $rootScope, _Users_){
     Users = _Users_;
-    spyOn(Users, 'query').andCallThrough();
+    querySpy = spyOn(Users, 'query').andCallThrough();
     $scope = $rootScope;
     var element = angular.element(
       '<form name="form">' +
@@ -43,7 +43,9 @@ describe('uniqueEmail directive', function() {
     expect(Users.query).not.toHaveBeenCalled();
     testInput.$setViewValue('other@abc.com');
     expect(Users.query).toHaveBeenCalled();
-    Users.query.reset();
+    querySpy.reset();
+    // The following is working too
+    //Users.query.reset();
     testInput.$setViewValue('admin@abc.com');
     expect(Users.query).not.toHaveBeenCalled();
     $scope.model.testValue = 'other@abc.com';
