@@ -65,8 +65,10 @@ describe('if directive', function () {
       '</div>'
     )(scope);
     scope.$apply('values = [1, 2, 3, 4]');
+    expect(element.children().length).toBe(2);
     expect(element.text()).toBe('23');
     scope.$apply('values.push(5)');
+    expect(element.children().length).toBe(3);
     expect(element.text()).toBe('234');
   });
 });
