@@ -8,8 +8,8 @@ angular.module('directives', [])
                 currentPage: '=',
                 onSelectPage: '&'
             },
-            //templateUrl: 'pagination.tpl.html',
-            template: '<div class="pagination">\
+            templateUrl: 'template\pagination.tpl.html',
+            /*template: '<div class="pagination">\
                 <ul>\
                 <li ng-class="{disabled: noPrevious()}">\
                     <a ng-click="selectPrevious()">Previous</a>\
@@ -22,7 +22,7 @@ angular.module('directives', [])
                 <a ng-click="selectNext()">Next</a>\
             </li>\
         </ul>\
-        </div>',
+        </div>',*/
             replace: true,
             controller: function ($scope, $element, $attrs) {
                 $scope.$watch('numPages', function (value) {

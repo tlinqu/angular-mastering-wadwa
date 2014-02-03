@@ -1,6 +1,7 @@
 describe('pagination directive', function () {
     var $scope, element, lis;
     beforeEach(module('directives'));
+    beforeEach(module('pagination.tpl.html'));
     beforeEach(inject(function ($compile, $rootScope) {
         $scope = $rootScope;
         $scope.numPages = 5;
