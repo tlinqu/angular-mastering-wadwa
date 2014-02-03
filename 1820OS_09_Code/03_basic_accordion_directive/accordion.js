@@ -39,8 +39,11 @@ angular.module('accordion', [])
   return {
     restrict:'E',
     controller:'AccordionController',
-    link: function(scope, element, attrs) {
-      element.addClass('accordion');
+      transclude:true,              // It transcludes the contents of the directive into the template
+      replace: true,
+      template: '<div class="accordion" ng-transclude></div>',
+      link: function(scope, element, attrs) {
+      //element.addClass('accordion');
     }
   };
 })
