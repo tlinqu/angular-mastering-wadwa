@@ -41,8 +41,8 @@ angular.module('field-directive', ['input.html', 'textarea.html', 'select.html']
 
   // Find the content that will go into the new label
   // Label is provided as a <label> child element of the original element
-  function getLabelContent(element) {
-    var label = element.find('label');
+  function getLabelContent(originalElement) {
+    var label = originalElement.find('label');
     return label[0] && label.html();
   }
 
