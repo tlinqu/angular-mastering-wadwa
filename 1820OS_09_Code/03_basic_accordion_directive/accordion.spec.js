@@ -9,7 +9,7 @@ describe('accordion', function () {
   }));
 
   describe('controller', function () {
-    var ctrl, $attrs;
+    var ctrl, $attrs; // $attrs is not used in this test suite
     beforeEach(inject(function($controller) {
       $attrs = {};
       ctrl = $controller('AccordionController', { $scope: $scope, $attrs: $attrs });
