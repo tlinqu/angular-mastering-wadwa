@@ -29,7 +29,7 @@
       <label>My Big Text</label>
       <validator key="maxlength">{{$fieldLabel}} must be less than 5</validator>
       <validator key="minlength">{{$fieldLabel}} must be greater than 2</validator>
-      <validator key="required">{{$fieldLabel}} must be greater than 2</validator>
+      <validator key="required">{{$fieldLabel}} is required</validator>
     </field>
 
     <field ng-model="myModel.choice" template="select.html" ng-options="x for x in ['A','B', 'C']">
