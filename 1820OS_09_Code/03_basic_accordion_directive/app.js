@@ -19,6 +19,6 @@ angular.module('app', ['accordion', 'accordion-group.html'])
   $scope.items = ['Item 1', 'Item 2', 'Item 3'];
 
   $scope.addItem = function() {
-    $scope.items.push('Item ' + $scope.items.length);
+    $scope.items.push('Item ' + ($scope.items.length+1));
   };
 });
