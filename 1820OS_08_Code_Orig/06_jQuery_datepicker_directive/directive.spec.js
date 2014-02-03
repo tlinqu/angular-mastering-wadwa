@@ -32,7 +32,7 @@ describe('date-picker directive', function() {
     beforeEach(function() {
       element = $compile('<input date-picker ng-model="x"/>')($rootScope);
     });
-    it('should not set datepicker to null when model is null or undefined', function() {
+    it('should set datepicker to null when model is null or undefined', function() {
       $rootScope.x = null;
       $rootScope.$digest();
       expect(element.datepicker('getDate')).toBe(null);
