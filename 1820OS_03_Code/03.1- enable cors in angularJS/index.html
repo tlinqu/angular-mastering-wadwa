@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
+    <script src="httpbasics.js"></script>
+</head>
+<body ng-app="httpbasics" ng-controller="HttpBasicsCtrl">
+
+<div>
+    <button ng-click="corsQuery()">$http CORS GET</button>
+    <pre>{{data | json}}</pre>
+</div>
+
+</body>
+</html>
