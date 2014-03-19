@@ -21,4 +21,7 @@ bin
 *.tmp
 *.zip
 
+dist
 node_modules
+templates.js
+*.html.js
