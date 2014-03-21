@@ -11,7 +11,7 @@ describe('pizza pit', function () {
   };
 
   var $q, $exceptionHandler, $log, $rootScope;
-  var servePreparedOrder, promisedOrder, pawel, pete;
+  var pawel, pete;
   beforeEach(inject(function (_$q_, _$exceptionHandler_, _$log_, _$rootScope_) {
     $q = _$q_;
     $exceptionHandler = _$exceptionHandler_;
