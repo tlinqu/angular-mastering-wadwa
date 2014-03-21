@@ -9,7 +9,8 @@ describe('$http basic', function () {
   beforeEach(inject(function (_$rootScope_, _$controller_) {
     $scope = _$rootScope_.$new();
     ctrl = _$controller_('UsersCtrl', {
-      $scope : $scope
+      $scope : $scope,
+        //$http: $http // You can have this line
     });
   }));
 
