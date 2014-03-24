@@ -10,6 +10,7 @@ describe('pizza pit', function () {
         };
     };
 
+    // $exceptionHandler - http://docs.angularjs.org/api/ng/service/$exceptionHandler
     var $q, $exceptionHandler, $log, $rootScope;
     var pawel, pete;
     beforeEach(inject(function (_$q_, _$exceptionHandler_, _$log_, _$rootScope_) {
