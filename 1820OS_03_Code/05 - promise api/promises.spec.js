@@ -11,6 +11,17 @@ describe('pizza pit', function () {
     };
 
     // $exceptionHandler - http://docs.angularjs.org/api/ng/service/$exceptionHandler
+    /*
+     In unit tests, if angular-mocks.js is loaded, this service is overridden by mock $exceptionHandler which aids in testing.
+     Example:
+     angular.module('exceptionOverride', []).factory('$exceptionHandler', function () {
+        return function (exception, cause) {
+            exception.message += ' (caused by "' + cause + '")';
+            throw exception;
+        };
+     });
+     This example will override the normal action of $exceptionHandler, to make angular exceptions fail hard when they happen, instead of just logging to the console.
+     */
     var $q, $exceptionHandler, $log, $rootScope;
     var pawel, pete;
     beforeEach(inject(function (_$q_, _$exceptionHandler_, _$log_, _$rootScope_) {
