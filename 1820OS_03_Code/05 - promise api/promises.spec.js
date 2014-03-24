@@ -166,7 +166,7 @@ describe('pizza pit', function () {
                 expect($log.info.logs).toContain(['Pawel is eating delicious Fresh salad,Pepperoni']);
             });
 
-            it('should illustrate promise aggregation when all of the promises fail - only the first failed message is received', function () {
+            it('should illustrate promise aggregation when all of the promises fail - only the first failed message is received - fail fast', function () {
 
                 var ordersDelivered = $q.all([
                     pizzaPit.takeOrder('Pepperoni'),
@@ -175,8 +175,11 @@ describe('pizza pit', function () {
 
                 ordersDelivered.then(pawel.eat, pawel.beHungry);
 
+                debugger;
                 pizzaPit.problemWithOrder('no pizza');
+                debugger;
                 saladBar.problemWithOrder('no fresh lettuce');
+                debugger;
                 expect($log.warn.logs).toContain(['Pawel is hungry because: no pizza']);
             });
 
