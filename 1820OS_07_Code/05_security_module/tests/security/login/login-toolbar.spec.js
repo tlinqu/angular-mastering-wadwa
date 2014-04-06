@@ -4,7 +4,7 @@ describe('login-toolbar', function() {
   beforeEach(inject(function(_$rootScope_, $compile, _security_) {
     $rootScope = _$rootScope_;
     security = _security_;
-    toolbar = $compile('<login-toolbar></login-toolbar')($rootScope);
+    toolbar = $compile('<login-toolbar></login-toolbar>')($rootScope);
     $rootScope.$digest();
     scope = toolbar.scope();
     angular.element(document.body).append(toolbar);
