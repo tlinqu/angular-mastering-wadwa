@@ -3,7 +3,7 @@ describe("alert", function () {
 
     beforeEach(module('alert-directive'));
     beforeEach(inject(function ($rootScope, $compile) {
-        scope = $rootScope;
+        scope = $rootScope; // $rootScope.$new();
 
         element = $compile("<alert type='\"info\"' close='closeHandler()'>Some Message</alert>")(scope);
         // $digest call is required, because 'info' value is set on the scope in the above element
